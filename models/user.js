@@ -1,7 +1,7 @@
 "use strict";
 
 let Sequelize = require("sequelize");
-let sequelize = require("../../config/databaseConn");
+let sequelize = require("../config/databaseConn");
 
 let User = sequelize.define("users", {
   email: Sequelize.STRING,

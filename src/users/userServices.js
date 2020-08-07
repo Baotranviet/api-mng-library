@@ -1,4 +1,4 @@
-let {User} = require("./user")
+let {User} = require("../../models/user")
 let bcrypt = require('bcrypt')
 
 let findUser = async (body) => {
