@@ -5,6 +5,7 @@ let expressValidator = require('express-validator')
 let session = require('express-session');
 let MySQLStore = require('express-mysql-session')(session);
 let userController = require('./src/users/userController');
+let authorController = require('./src/authors/authorController');
 let app = express()
 let PORT = 8080
 
@@ -29,9 +30,10 @@ app.use(bodyParser.json())
 app.use(expressValidator())
 
 app.use("/", userController);
+app.use("/authors", authorController);
 
 app.listen(PORT, () => {
   console.log("Server started on http://localhost:" + PORT);
 })
 
-module.exports = app;
+module.exports = app; 

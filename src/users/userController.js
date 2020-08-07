@@ -39,7 +39,6 @@ router.post("/login", async (req, res, next) => {
       return res.send({message: "Sign In successfully."});
     }
   } catch (err) {
-    console.log(err);
     return res.status(500).send({error: err});
   }
 });
