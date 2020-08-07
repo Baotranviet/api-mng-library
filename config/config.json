@@ -1,0 +1,9 @@
+{
+    "development": {
+        "username": "root",
+        "password": "",
+        "database": "api-mng-library",
+        "host": "localhost",
+        "dialect": "mysql"
+    }
+}
