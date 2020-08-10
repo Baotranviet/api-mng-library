@@ -6,6 +6,9 @@ let session = require('express-session');
 let MySQLStore = require('express-mysql-session')(session);
 let userController = require('./src/users/userController');
 let authorController = require('./src/authors/authorController');
+let borrowerController = require('./src/borrowers/borrowerController');
+let bookController = require('./src/books/bookController');
+let borrowController = require('./src/borrows/borrowController');
 let app = express()
 let PORT = 8080
 
@@ -31,6 +34,9 @@ app.use(expressValidator())
 
 app.use("/", userController);
 app.use("/authors", authorController);
+app.use("/borrowers", borrowerController);
+app.use("/books", bookController);
+app.use("/borrows", borrowController);
 
 app.listen(PORT, () => {
   console.log("Server started on http://localhost:" + PORT);
